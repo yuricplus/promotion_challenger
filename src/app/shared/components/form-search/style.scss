@@ -1,0 +1,33 @@
+
+.form {
+    .form-group {
+        display: flex;
+        border: 1px solid #eaeaea;
+        align-items: center;
+
+        .inpt {
+            border: none;
+            width: 250px;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .btn {
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            border-left: 1px solid #eaeaea;
+            padding: 4px;
+        }
+
+        .icon-search {
+            width: 100%;
+            height: 100%;
+            &::before {
+                content: url('../../../../../public/search-outline.svg');
+            }
+        }
+    }
+}

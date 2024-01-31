@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Possivel erros
+You are using Node.js 16.14.0. For Next.js, Node.js version >= v18.17.0 is required.
+
 ## Getting Started
 
 First, run the development server:
