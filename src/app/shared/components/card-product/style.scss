@@ -1,0 +1,21 @@
+.card {
+  border: 1px solid #eaeaea;
+  max-width: 150px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+
+  .card-image {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .card-title {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .card-price {
+    font-weight: bold;
+  }
+}

@@ -13,6 +13,16 @@ const nextConfig = {
     URL_API: 'https://api.mercadolibre.com/',
     CLIENT_SECRET: 'lnj2XyE6sAFfAONJKq6HJP6pEKzQWaMh',
     CLIENT_ID: '1434917487896468'
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'http2.mlstatic.com',
+        port: '',
+        pathname: '/**'
+      }
+    ]
   }
 };
 
