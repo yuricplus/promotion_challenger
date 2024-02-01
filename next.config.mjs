@@ -12,12 +12,13 @@ const nextConfig = {
   env: {
     URL_API: 'https://api.mercadolibre.com/',
     CLIENT_SECRET: 'lnj2XyE6sAFfAONJKq6HJP6pEKzQWaMh',
-    CLIENT_ID: '1434917487896468'
+    CLIENT_ID: '1434917487896468',
+    ACCESS_TOKEN: 'APP_USR-12345678-031820-X-12345678'
   },
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: 'http',
         hostname: 'http2.mlstatic.com',
         port: '',
         pathname: '/**'

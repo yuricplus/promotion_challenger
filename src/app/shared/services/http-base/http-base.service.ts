@@ -1,19 +1,18 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import authApi from '../../interceptors/auth.interceptor'
-
 
 export class HttpBaseService {
   constructor() {}
-  private headers = {
-    Authorization: `Bearer ${process.env.CLIENT_SECRET}`
-  }
-  private apiBase = process.env.URL_API;
-  public axios = authApi
-  private token: string | null = null;
+  public axios = axios.create({
+    baseURL: process.env.URL_API
+  });
+//   public headers = { 
+//     headers: {
+//         Authorization: `Bearer ${process.env.ACCESS_TOKEN}`
+//     }
+//   }
 
   async get(url: string, params?: any): Promise<any> {
-    const headers = this.headers;
-    const response = await this.axios.get(`${url}`, { params, headers });
+    const response = await this.axios.get(`${url}`, { params });
     return response.data;
   }
 

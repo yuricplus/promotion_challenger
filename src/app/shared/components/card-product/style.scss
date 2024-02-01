@@ -1,9 +1,11 @@
 .card {
   border: 1px solid #eaeaea;
-  max-width: 150px;
   text-align: center;
   padding: 10px;
   margin: 10px;
+  box-shadow: 1px 1px 1px #eaeaea;
+  height: 250px;
+  width: 200px;
 
   .card-image {
     border-bottom: 1px solid #eaeaea;
@@ -11,7 +13,7 @@
 
   .card-title {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     margin: 10px 0;
   }
 

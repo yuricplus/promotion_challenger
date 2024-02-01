@@ -1,0 +1,15 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+
+  .result-keywords {
+    margin: 50px 10px;
+  }
+
+  .products-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

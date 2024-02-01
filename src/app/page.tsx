@@ -6,10 +6,10 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter()
-
+  
   useEffect(() => {
     const baseService = new HttpBaseService();
-    baseService.get('products/search?status=active&site_id=MLBR&q=Xbox')
+    baseService.get('products/search?status=active&site_id=MLA&q=Samsung 20 Galaxy S8 64 GB rosa')
     console.log('data', process.env.URL_API)
   }, []) 
 

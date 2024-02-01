@@ -1,3 +1,4 @@
 export enum HTTP_ENUM {
-  UNAUTORIZED = 401
+  UNAUTORIZED = 401,
+  FORBIDDEN = 403
 }
