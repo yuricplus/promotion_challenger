@@ -8,12 +8,18 @@ import { IProductData, ISearcResult } from "../shared/interfaces/search-result.i
 
 import './style.scss'
 import { useRouter } from "next/navigation";
+import { PaginationComponent } from "../shared/components/pagination/pagination";
 
 export default function search() {
     const searchParams = useSearchParams();
     const [result, setResult] = useState<IProductData[]>([])
     const [keyWords, setKeyWords] = useState<string>()
     const router = useRouter()
+
+    const handelPage = (page: number) => {
+        console.log(page)
+    }
+
     const searchProducts = (e: Event) => {
         e.preventDefault();
         const form = e.target as HTMLFormElement;
@@ -46,6 +52,9 @@ export default function search() {
                 {result.map((item) => (
                     <CardProduct url={item.thumbnail} title={item.title} price={item.price} id={item?.id} key={item?.id}/>
                 ))}
+            </div>
+            <div className="bottom-result">
+                <PaginationComponent totalPages={20} handlePageChange={(e: number) => handelPage(e)} actualPage={14}/>
             </div>
         </section>
        </>
