@@ -4,7 +4,7 @@
   padding: 10px;
   margin: 10px;
   box-shadow: 1px 1px 1px #eaeaea;
-  height: 250px;
+  height: 230px;
   width: 200px;
 
   .card-image {
@@ -15,9 +15,13 @@
     font-weight: 400;
     font-size: 12px;
     margin: 10px 0;
+    height: 30px;
+    white-space: wrap;
+    overflow: hidden;
   }
 
   .card-price {
     font-weight: bold;
+    margin-top: 30px;
   }
 }
