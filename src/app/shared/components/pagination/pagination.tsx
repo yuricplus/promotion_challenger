@@ -15,12 +15,12 @@ export const PaginationComponent = (props: IPropsPagination) => {
 
 	const limitPagination = ():number => {
 		const maxItem = 10;
-		let page = 0;
+		let page = 1;
 
 		if(props.totalPages < maxItem) return props.totalPages;
 
 		if(props.actualPage >= maxItem) {
-			startFrom = props.actualPage - 10;
+			startFrom = props.actualPage - 10 + 1;
 			page = maxItem + startFrom + 1;
 
 			console.log(page)
@@ -28,14 +28,12 @@ export const PaginationComponent = (props: IPropsPagination) => {
 			console.log(startFrom)
 			return page;
 		}
-
-		console.log('badah')
 		return maxItem;
 	}
 
 
 	const ButtonComponent = (btnProps: IPage) => {
-		if(btnProps.page <= startFrom) return null;
+		if(btnProps.page < startFrom) return null;
 		return (
 			<li className='content-item'>
 				<button
