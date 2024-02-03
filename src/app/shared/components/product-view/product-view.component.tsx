@@ -3,7 +3,11 @@ import React, { MouseEventHandler, useState } from "react";
 
 import './style.scss'
 
-export const ProductView = () => {
+interface IProductViewProps {
+    url: string
+}
+
+export const ProductView = (props: IProductViewProps) => {
 
     const createBox = (element: React.MouseEvent<HTMLImageElement>) => {
         const boxView = document.getElementById('product-view') as HTMLElement;
@@ -19,7 +23,7 @@ export const ProductView = () => {
 
     const hiddenBox = () => {
         const boxView = document.querySelector('.box-container') as HTMLElement;
-        boxView.style.opacity = '0'
+        boxView.style.opacity = '0';
     }
 
     const ViewProduct = () => {
@@ -33,8 +37,8 @@ export const ProductView = () => {
     return (
         <div className="product-container">
             <ViewProduct />
-            <Image src="http://http2.mlstatic.com/D_NQ_NP_2X_959539-MLB73240676513_122023-F.webp"
-                width={300} height={400} alt='teste' onMouseMove={(event) => createBox(event)} onMouseOut={() => hiddenBox()}
+            <Image src={props.url}
+                width={300} height={400} alt='Imagem Ilustrativa' onMouseMove={(event) => createBox(event)} onMouseOut={() => hiddenBox()}
             />
         </div>
     )
