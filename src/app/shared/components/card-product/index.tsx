@@ -26,7 +26,7 @@ const CardProduct = (props: ICardProductComponentProps) => {
                 <div className="card-title" tabIndex={0} aria-level={2}>
                     <span className="title-product">{props.title}</span>
                 </div>
-                <div className="card-price" aria-label={props.price} aria-roledescription="Preço">
+                <div className="card-price" aria-roledescription="Preço">
                     <span className="price-product">{formatPrice(props.price)}</span>
                 </div>
             </div>
