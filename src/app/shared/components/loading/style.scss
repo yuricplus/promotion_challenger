@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+
+  .content-loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    height: 300px;
+
+    .loader-icon {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #EAEAEA;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: spin 1s linear infinite; /* Safari */
+      animation: spin 1s linear infinite;
+      margin-top: 40px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
