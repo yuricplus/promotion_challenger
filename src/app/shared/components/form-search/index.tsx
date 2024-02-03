@@ -14,7 +14,7 @@ const FormSearch = (props: IFormSearchComponentProps) => {
     return (
         <form className="form" onSubmit={(e) => props.searchProducts(e)}>
             <div className="form-group">
-                <input type="search" name="search" id="search" className="inpt" autoComplete='off'/>
+                <input type="search" name="search" id="search" className="inpt" autoComplete='off' placeholder='Buscar Produto'/>
                 <button aria-label='buscar' className='btn'>
                     <i className='icon-search' aria-hidden="true"></i>
                 </button>
