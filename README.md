@@ -20,6 +20,10 @@ npm i
 ```
 npm run dev
 ```
+3º Para executar os testes unitarios
+```
+npm run test
+```
 
 Lembre-se de estar na pasta correta dentro do prompt.
 
