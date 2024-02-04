@@ -42,11 +42,10 @@ Os componentes foram abstraídos para melhorar o compartilhamento de componentes
 
 ## SCSS e estilização
 Para estilização foi feita com Scss com o BEM facilitando a escrita de css e a quantidade reduzida para evitar excesso de css desnecessário, escritas de funções e variaveis dinamicas.
+Preferir por escrever o css com flex e usando o Mobile First mesmo não estando especifico o Mobile.
 
 ## Acessibilidade
 Componentes acessiveis com tags e roles utilizados para facilitar a busca no SEO e o acesso por deficientes visuais utilizando ferramentas de leituras de telas.
-
-Preferir por escrever o css com flex e usando o Mobile First mesmo não estando especifico o Mobile.
 
 ## Testes Unitarios
 Os testes unitarios foram executados  cobrindo algumas camadas da arquitetura cobrindo em torno de 92%.
