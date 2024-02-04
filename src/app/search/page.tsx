@@ -21,7 +21,7 @@ export default function search() {
     const [limit, setLimits] = useState(0)
     const router = useRouter()
 
-    const handleSearch = (page: number) => {
+    const setClickPageNumber = (page: number) => {
         const terms = searchParams.get('term') as string;
         scrolToTop();
         setActualPage(page);
@@ -54,7 +54,7 @@ export default function search() {
     }
 
     const scrolToTop = () => {
-        window.scrollTo({top: 0, behavior: 'smooth'})
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     useEffect(() => {
@@ -62,12 +62,12 @@ export default function search() {
         getProductsByTerms(terms)
     }, [])
 
-    if(loading) return (
+    if (loading) return (
         <>
-         <HeaderComponent callBackSearch={searchProducts}></HeaderComponent>
-         <LoadingComponent/>
+            <HeaderComponent callBackSearch={searchProducts}></HeaderComponent>
+            <LoadingComponent />
         </>
-      );
+    );
 
     return (
         <>
@@ -82,7 +82,7 @@ export default function search() {
                     ))}
                 </div>
                 <div className="bottom-result">
-                    <PaginationComponent totalPages={limit} handlePageChange={(e: number) => handleSearch(e)} actualPage={actualPage} />
+                    <PaginationComponent totalPages={limit} handlePageChange={(e: number) => setClickPageNumber(e)} actualPage={actualPage} />
                 </div>
             </section>
         </>

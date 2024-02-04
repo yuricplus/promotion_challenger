@@ -22,7 +22,7 @@ export default function DetailsPage({ params }: { params: { id: string } }) {
       const data = await searchService.getDescription(id)
       setDescription(data.plain_text)
     } catch (error) {
-      
+      console.log(error)
     }
   }
 
