@@ -1,8 +1,7 @@
 import '@testing-library/jest-dom';
 import React, { useState as useStateMock } from 'react';
-import { render, fireEvent, screen, waitFor, renderHook } from "@testing-library/react";
+import { render, fireEvent, screen, waitFor } from "@testing-library/react";
 import Search from "./page";
-import { useRouter } from 'next/router';
 import { act } from 'react-dom/test-utils';
 
 jest.mock('next/navigation', () => ({
