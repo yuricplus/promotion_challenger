@@ -22,10 +22,6 @@ export const PaginationComponent = (props: IPropsPagination) => {
 		if(props.actualPage >= maxItem) {
 			startFrom = props.actualPage - 10 + 1;
 			page = maxItem + startFrom + 1;
-
-			console.log(page)
-
-			console.log(startFrom)
 			return page;
 		}
 		return maxItem;
@@ -37,6 +33,7 @@ export const PaginationComponent = (props: IPropsPagination) => {
 		return (
 			<li className='content-item'>
 				<button
+				  data-testid={`${btnProps.page} pagination`}
 					onClick={() => props.handlePageChange(btnProps.page)}
 					aria-label={`Pagina ${btnProps.page}`}
 					className={btnProps.page === props.actualPage ? 'active' : ''}>

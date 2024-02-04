@@ -21,7 +21,7 @@ export default function search() {
     const [limit, setLimits] = useState(0)
     const router = useRouter()
 
-    const handelPage = (page: number) => {
+    const handleSearch = (page: number) => {
         const terms = searchParams.get('term') as string;
         scrolToTop();
         setActualPage(page);
@@ -43,11 +43,11 @@ export default function search() {
         try {
             const searchService = new SearchService();
             const response = await searchService.searchProducts(terms, actualPage) as ISearcResult;
+            setLoading(false)
             setLimits(response.paging.limit);
             setResult(response?.results);
             setKeyWords(terms);
             search.value = terms;
-            setLoading(false)
         } catch (error) {
             setLoading(false)
         }
@@ -76,13 +76,13 @@ export default function search() {
                 <div className="result-keywords">
                     <h1>Resultado: {keyWords}</h1>
                 </div>
-                <div className="products-result">
-                    {result.map((item) => (
+                <div className="products-result" data-testid="list">
+                    {result?.map((item) => (
                         <CardProduct url={item.thumbnail} title={item.title} price={item.price} id={item?.id} key={item?.id} />
                     ))}
                 </div>
                 <div className="bottom-result">
-                    <PaginationComponent totalPages={limit} handlePageChange={(e: number) => handelPage(e)} actualPage={actualPage} />
+                    <PaginationComponent totalPages={limit} handlePageChange={(e: number) => handleSearch(e)} actualPage={actualPage} />
                 </div>
             </section>
         </>
