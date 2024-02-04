@@ -1,39 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## **Desafio Front End**
 
-Possivel erros
-You are using Node.js 16.14.0. For Next.js, Node.js version >= v18.17.0 is required.
+![enter image description here](https://github.com/yuricplus/promotion_challenger/blob/main/public/home.png?raw=true)
 
-## Getting Started
+![enter image description here](https://github.com/yuricplus/promotion_challenger/blob/main/public/busca.png?raw=true)
 
-First, run the development server:
+![enter image description here](https://github.com/yuricplus/promotion_challenger/blob/main/public/detalhes.png?raw=true)
 
-```bash
+**Instruções**
+
+Versões do node >= v18.17.0 é obrigatorio❕
+O serviço pode ser executado por meio dos comandos:
+
+1º Instale as dependências
+```
+npm i
+```
+2º Execute o projeto.
+
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lembre-se de estar na pasta correta dentro do prompt.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Arquitetura
+Para o projeto foi decidido utilizar o NextJs com typescript.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ - Renderização hibrida e de servidor o que facilita no desempenho e melhoria do SEO.
+ - Otimização de Imagens.
+ - Roteamento e tempo de carregamento da pagina
 
-## Learn More
+Para gerenciar os dados foi utilizado o hook do React como o `useState()` e compartilhamento via Props pela facilidade e quantidade de dados para transição. Trazendo abertura para integração com o `useContext`.
 
-To learn more about Next.js, take a look at the following resources:
+Foram criados componentes que pudessem ser reutilizados em diversas etapas do projeto como por exemplo o `CardComponet` e o `HeaderComponente` com um modelo bem semelhante ao Atomic Design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Os componentes foram abstraídos para melhorar o compartilhamento de componentes e retirar as regras engessadas.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## SCSS e estilização
+Para estilização foi feita com Scss com o BEM facilitando a escrita de css e a quantidade reduzida para evitar excesso de css desnecessário, escritas de funções e variaveis dinamicas.
 
-## Deploy on Vercel
+Preferir por escrever o css com flex e usando o Mobile First mesmo não estando especifico o Mobile.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Testes Unitarios
+Os testes unitarios foram executados  cobrindo algumas camadas da arquitetura cobrindo em torno de 92%.
+Para os testes unitarios foram utilizados `@jest`, `@testing-library/react`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![enter image description here](https://github.com/yuricplus/promotion_challenger/blob/main/public/coverage.png?raw=true)
+
+Muito obrigado!
+
